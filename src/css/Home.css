@@ -1,0 +1,127 @@
+.home{
+background: var(--light-mode-background);
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.form__input {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    padding: 15px 10px;
+    background: white;
+    border-radius: 4px;
+box-shadow: 4px 5px 5px -7px rgba(0, 0, 0, 0.75);
+
+}
+.form__input input {
+    background: transparent;
+    flex: 1;
+    color:var(--light-mode-input);
+    font-weight: 600;
+}
+.form__input input::placeholder {
+    font-weight: 600;
+    color:var(--light-mode-input);
+}
+
+.form__icon{
+    margin-right: 20px;
+    color:var(--light-mode-input);
+}
+
+select ,option {
+    margin-top: 10px;
+    font-weight: 600;
+    background: white;
+    border: none;
+}
+select{
+    padding: 16px;
+    width: 200px;
+    border-radius: 4px;
+}
+option {
+    border: none;
+}
+/* media queries */
+
+@media (max-width:656px){
+    .form {
+        align-items: unset;
+        flex-direction: column;
+    }
+}
+
+
+/* Countries component */
+.countries {
+    padding: 30px 20px 50px;
+}
+
+.countries a {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+
+}
+.countries a:hover  {
+        transform:scale(1.07);
+}
+.countries a:active {
+    transform:scale(1.07);
+}
+.countries .flag img {
+    border-radius: 5px 5px 0 0;
+}
+
+.countries .details {
+    border-radius: 0 0 5px 5px;
+    background: var(--text-color);
+    margin: -10px 0 30px;
+    padding: 20px;
+    color:var(--light-mode-text);
+}
+
+
+.countries .details h4 {
+    margin: 10px 0;
+    font-weight: 600;
+}
+.countries h1 {
+    margin: 20px 0;
+}
+.countries .details h4 span {
+    font-weight: 300;
+}
+/* form  */
+
+@media (min-width: 640px) {
+    .countries {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .countries .details {
+        margin: -10px 0 0;
+    }
+    .form__input {
+        max-width: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .countries {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1366px) {
+    .countries {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

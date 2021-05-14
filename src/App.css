@@ -1,0 +1,29 @@
+
+:root {
+  --dark-bg-color: hsl(207, 26%, 17%);
+  --article-color: hsl(209, 23%, 22%);
+  --text-color: hsl(0, 0%, 100%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+}
+/* header styles */
+header{
+  background: var(--text-color);
+  position: sticky;
+  top: 0;
+  padding: 24px;
+  z-index: 1300;
+  box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+
+}
+header h1 {
+  font-size: 18px;
+  color:var(--light-mode-text);
+  font-weight: 800;
+}
+.container{
+  max-width: 112rem;
+  margin: 0 auto;
+  width: 90%;
+}
